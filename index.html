@@ -54,7 +54,9 @@
       <h1>Karthikeyan Vijayan</h1>
       <div class="contact">
         <p>
-          <a href="mailto:example@email.com">karthikeyanvijayan93@gmail.com</a>
+          <a href="mailto:karthikeyanvijayan93@gmail.com"
+            >karthikeyanvijayan93@gmail.com</a
+          >
           • <a href="https://linkedin.com/in/karthikeyan993">LinkedIn</a> •
           <a href="https://github.com/karthikeyan993">GitHub</a> •
           <a href="https://leetcode.com/u/karthikeyanvijayan93/">Leetcode</a>
@@ -88,14 +90,6 @@
       <h3>Full Stack Developer at Central Tech</h3>
       <p>03/2022 - 12/2023</p>
       <ul>
-        <li>
-          Built an End-to-End Sports Competition Website (playu.in) featuring
-          registration, payment processing, and form submissions
-        </li>
-        <li>
-          Developed a random meal generator web application using React and
-          Next.js
-        </li>
         <li>
           Implemented single page checkout redesign, reducing checkout drops by
           10%
@@ -169,9 +163,6 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const loadEl = document.querySelector("#load");
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
         // firebase.auth().onAuthStateChanged(user => { });
         // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
         // firebase.firestore().doc('/foo/bar').get().then(() => { });
@@ -201,9 +192,10 @@
             ", "
           )}`;
         } catch (e) {
-          console.error(e);
-          loadEl.textContent =
-            "Error loading the Firebase SDK, check the console.";
+          if (loadEl) {
+            loadEl.textContent =
+              "Error loading the Firebase SDK, check the console.";
+          }
         }
       });
     </script>
